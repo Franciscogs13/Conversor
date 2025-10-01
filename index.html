@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    </head>
+<body>
+    <div class="container">
+        <h1>Conversor de Moedas</h1>
+        <p>Converta valores entre diferentes moedas com taxas atualizadas.</p>
+        <div class="converter-wrapper">
+            <div class="input-group">
+                <label for="amount">Valor</label>
+                <input type="number" id="amount" value="1" min="0">
+            </div>
+            <div class="input-group">
+                <label for="fromCurrency">De</label>
+                <select id="fromCurrency"></select>
+            </div>
+            <div class="swap-icon">
+                <img src="https://img.icons8.com/ios-filled/50/000000/sort.png" alt="Trocar moedas"/>
+            </div>
+            <div class="input-group">
+                <label for="toCurrency">Para</label>
+                <select id="toCurrency"></select>
+            </div>
+        </div>
+        <button id="convertBtn">Converter</button>
+        <div id="result" class="result-display"></div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
