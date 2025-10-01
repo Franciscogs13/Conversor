@@ -1,87 +1,90 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+  background-color: #333;
 }
 
 .container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 90%;
-    max-width: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
 }
 
 h1 {
-    color: #333;
+  color: #333;
 }
 
 .converter-wrapper {
-    display: flex;
-    align-items: flex-end; /* Alinha os itens na base */
-    justify-content: space-between; /* Espaço entre os itens */
-    gap: 15px;
-    margin: 20px 0;
-    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+  display: flex;
+  align-items: flex-end; /* Alinha os itens na base */
+  justify-content: space-between; /* Espaço entre os itens */
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-grow: 1; /* Faz os inputs ocuparem o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1; /* Faz os inputs ocuparem o espaço disponível */
 }
 
 label {
-    margin-bottom: 5px;
-    font-size: 0.9em;
-    color: #555;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #555;
 }
 
-input, select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-    width: 100%; /* Faz com que o input/select ocupe todo o espaço do .input-group */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%; /* Faz com que o input/select ocupe todo o espaço do .input-group */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
 }
 
 .swap-icon {
-    cursor: pointer;
-    padding-bottom: 10px; /* Alinha o ícone com os inputs */
-    flex-shrink: 0; /* Impede que o ícone encolha */
+  cursor: pointer;
+  padding-bottom: 10px; /* Alinha o ícone com os inputs */
+  flex-shrink: 0; /* Impede que o ícone encolha */
 }
 
 .swap-icon img {
-    width: 25px;
+  width: 25px;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .result-display {
-    margin-top: 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    min-height: 30px;
+  margin-top: 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  min-height: 30px;
 }
