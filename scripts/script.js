@@ -59,7 +59,6 @@ async function convertCurrency() {
             const conversionResult = data.conversion_result;
             resultEl.textContent = `${amount} ${fromCurrency} = ${conversionResult.toFixed(2)} ${toCurrency}`;
 
-            // ---- IMPORTANTE: AQUI A MÁGICA DO TAGEAMENTO ACONTECE ----
             // Enviamos um evento para a camada de dados (dataLayer)
             window.dataLayer.push({
                 'event': 'currency_conversion', // Nome do evento personalizado
