@@ -59,15 +59,17 @@ async function convertCurrency() {
             const conversionResult = data.conversion_result;
             resultEl.textContent = `${amount} ${fromCurrency} = ${conversionResult.toFixed(2)} ${toCurrency}`;
 
-            // Enviamos um evento para a camada de dados (dataLayer)
+            const amountToPush = parseFloat(amount);
+            console.log("Valor do input:", amount, "Valor após parseFloat:", amountToPush); 
+
             window.dataLayer.push({
-                'event': 'currency_conversion', // Nome do evento personalizado
+                'event': 'currency_conversion',
                 'from_currency': fromCurrency,
                 'to_currency': toCurrency,
-                'conversion_amount': parseFloat(amount)
+                'conversion_amount': amountToPush
             });
             
-            console.log('Evento currency_conversion enviado para o dataLayer:', {from_currency: fromCurrency, to_currency: toCurrency, conversion_amount: parseFloat(amount)});
+            console.log('Evento currency_conversion enviado para o dataLayer:', {from_currency: fromCurrency, to_currency: toCurrency, conversion_amount: parseFloat(amountToPush)});
 
         } else {
             resultEl.textContent = 'Erro ao converter. Verifique as moedas selecionadas.';
