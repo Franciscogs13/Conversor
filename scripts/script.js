@@ -83,3 +83,45 @@ async function convertCurrency() {
 
 convertBtn.addEventListener('click', convertCurrency);
 document.addEventListener('DOMContentLoaded', populateCurrencies);
+
+// =======================================================================
+// CÓDIGO PARA TESTE DE VOLUME (NÃO EXECUTA SOZINHO)
+// =======================================================================
+
+// Função que gera um único evento de conversão falso
+function generateRandomEvent() {
+  const currencies = ['USD', 'EUR', 'BRL', 'JPY', 'GBP', 'CAD', 'AUD', 'CHF'];
+  let fromCurrency = currencies[Math.floor(Math.random() * currencies.length)];
+  let toCurrency;
+  do {
+    toCurrency = currencies[Math.floor(Math.random() * currencies.length)];
+  } while (toCurrency === fromCurrency);
+
+  const randomAmount = parseFloat((Math.random() * 4999 + 1).toFixed(2));
+
+  const eventData = {
+    'event': 'currency_conversion',
+    'from_currency': fromCurrency,
+    'to_currency': toCurrency,
+    'conversion_amount': randomAmount
+  };
+
+  window.dataLayer.push(eventData);
+  console.log('Evento Falso Gerado:', eventData);
+}
+
+/**
+ * Função para iniciar o disparo de múltiplos eventos falsos.
+ * Chame esta função pelo console do navegador para iniciar o teste.
+ * @param {number} totalEvents - O número total de eventos a serem gerados.
+ * @param {number} delayMs - O intervalo em milissegundos entre cada evento.
+ */
+function iniciarTesteDeVolume(totalEvents = 50, delayMs = 2000) {
+  console.log(`--- Iniciando disparo de ${totalEvents} eventos falsos com intervalo de ${delayMs}ms ---`);
+  for (let i = 0; i < totalEvents; i++) {
+    setTimeout(generateRandomEvent, i * delayMs);
+  }
+  setTimeout(() => {
+    console.log(`--- Disparo de ${totalEvents} eventos concluído! ---`);
+  }, totalEvents * delayMs);
+}
