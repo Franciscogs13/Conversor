@@ -113,8 +113,6 @@ function generateRandomEvent() {
 /**
  * Função para iniciar o disparo de múltiplos eventos falsos.
  * Chamar esta função pelo console do navegador para iniciar o teste.
- * @param {number} totalEvents - O número total de eventos a serem gerados.
- * @param {number} delayMs - O intervalo em milissegundos entre cada evento.
  */
 function iniciarTesteDeVolume(totalEvents = 50, delayMs = 2000) {
   console.log(`--- Iniciando disparo de ${totalEvents} eventos falsos com intervalo de ${delayMs}ms ---`);
