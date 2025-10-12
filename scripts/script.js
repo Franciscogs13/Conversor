@@ -112,7 +112,7 @@ function generateRandomEvent() {
 
 /**
  * Função para iniciar o disparo de múltiplos eventos falsos.
- * Chame esta função pelo console do navegador para iniciar o teste.
+ * Chamar esta função pelo console do navegador para iniciar o teste.
  * @param {number} totalEvents - O número total de eventos a serem gerados.
  * @param {number} delayMs - O intervalo em milissegundos entre cada evento.
  */
